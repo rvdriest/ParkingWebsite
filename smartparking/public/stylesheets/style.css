@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0 2rem;
+}
+
+html {
+  background: url(../images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+p {
+  color: white;
+  font-size: 1rem;
+}
+
+#information {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  float: left;
+  width: 40%;
+}
+
+#table {
+  float: right;
+  position: absolute;
+  right: 15rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+td {
+  padding: 2rem;
+}
+
+thead tr td {
+  color: white;
+}
+
+tbody tr td {
+  color: black;
+}
+
+thead tr {
+  background: linear-gradient(blue, purple);
+}
+
+tbody tr {
+  background-color: white;
+}
+
