@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
   <head>
     <title>P+R Utrecht Science Park Parkeerplekken</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Vind hier P+R Utrecht Science Park Parkeerplekken status.">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
@@ -11,7 +13,7 @@
       <p>P+R Utrecht Science Park is een parkeergarage in hartje Utrecht. P+R Utrecht
         Science Park is een parkeergarage waar mensen hun auto kunnen parkeren om
         vervolgens het centrum van Utrecht in te gaan met de bus of metro.
-      </br></br>Nog wat handige informatie:
+      </br></br>Nog wat feiten op een rij:
       </br>
         ● P+R Utrecht Science Park (De Uithof) heeft een totaal aan 500
         parkeerplekken en is onderdeel van een overdekte parkeergarage.</br>
@@ -24,7 +26,7 @@
         ● Op een P+R kun je niet van te voren een plek reserveren</p>
       </section>
       <section id="table">
-        <table>
+        <table cellspacing="0" cellpadding="0">
           <thead>
             <tr>
               <td>Verdieping</td>
@@ -34,11 +36,11 @@
           <tbody>
             <tr>
               <td>0</td>
-              <td>24/50</td>
+              <td><%= verdieping0 %>/50</td>
             </tr>
             <tr>
               <td>1</td>
-              <td>18/50</td>
+              <td><%= verdieping1 %>/50</td>
             </tr>
           </tbody>
         </table>
