@@ -41,11 +41,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 client.connect();
 
-var j = schedule.scheduleJob('*/10 * * * * *', function (fireDate) {
+function updatePlekken() {
   client.query('SELECT * FROM "public"."Parkingspots"', (err, result) => {
     if (err)
       throw err;
-    console.log(result.rows);
+    /* Efficienter doen */
     aantalPlekkenVerdieping0 = 0;
     aantalPlekkenVerdieping1 = 0;
     aantalPlekkenVerdieping2 = 0;
@@ -65,15 +65,20 @@ var j = schedule.scheduleJob('*/10 * * * * *', function (fireDate) {
           aantalPlekkenVerdieping3++;
         }
       }
-    });
+    }); /* */
   });
+}
+
+var j = schedule.scheduleJob('*/10 * * * * *', function (fireDate) {
+  updatePlekken();
 });
 
 app.use('/', function (req, res) {
-
   res.render('index', {
     verdieping0: aantalPlekkenVerdieping0,
-    verdieping1: aantalPlekkenVerdieping1
+    verdieping1: aantalPlekkenVerdieping1,
+    verdieping2: aantalPlekkenVerdieping2,
+    verdieping3: aantalPlekkenVerdieping3
   });
 
 });
